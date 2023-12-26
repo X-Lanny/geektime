@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    /* font: 400 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif; */
+}
+input{
+    font: 400 1em/1.8 PingFang SC,Avenir,Tahoma,Arial,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+a{
+    text-decoration: none;
+}
+.page-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 116px;
+    width: 100%;
+    min-height: 1200px;
+}
+.header-top-container .header-top-bg{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url(https://static001.geekbang.org/resource/image/65/76/6593a7ef8aafc36cab692874c5848e76.png);
+    background-size: cover;
+    /* background-position: 50%; */
+    /* cover 值表示背景图像将被缩放以完全覆盖包含它的容器，可能部分图像会被裁剪以适应容器的大小。背景图像保持其宽高比并尽量覆盖整个容器。
+    确保背景图像会被缩放以覆盖整个元素，同时保持其宽高比。 */
+}
+.header-top-container .header-top-img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50px;
+    width: 1200px;
+    transform: translate3d(-50%, 0, 0);
+    /* -50% 表示在 x 轴上向左平移元素的宽度的一半。 */
+    /* transform: translateX(-50%) */
+    /* background-size: contain; */
+    background-position: bottom;
+}
+.header-top-icon{
+    position: absolute;
+    top: 2px;
+    right: 66px;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    transform: scale(.8);
+    color: rgb(228, 232, 236);
+    cursor: pointer;
+}
+.header-bottom-container{
+    height: 65px;
+    display: block;
+    /* min-height: inherit;*/
+    font-family: Avenir,Helvetica,Arial,sans-serif!important;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+.header-bottom-content{
+    height: inherit;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-bottom-content .header-bottom-lf{
+    width: 665.88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-bottom-lf .header-link{
+    transform: translateY(-2px);
+    width: 125px;
+    height: 31px;
+    background-size: 100% 100%;
+    background-image: url(https://static001.geekbang.org/static/time/img/geek_elements/logo-wap.png);
+}
+.header-nav-list{
+    flex: 1;
+    margin-left: 26px;
+    height: 100%;
+    /* width: ; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-nav-item{
+    position: relative;
+    /* display: flex; */
+    /* align-items: center; */
+    padding: 8px 14px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #353535;
+}
+.header-nav-item.enterprise{
+    padding-left: 33px;
+}
+.header-nav-arrow{
+    display: inline-block;
+    margin-left: 1px;
+    /* font-size: 12px; */
+    font-size: 16px;
+    font-weight: 700;
+    transform: translateY(-1px);
+}
+.header-nav-icon.vip{
+    width: 38px;
+    /* max-width: none; */
+    transform: translateY(2px);
+    background-size: contain; 
+    /* background-image: url(https://static001.geekbang.org/resource/image/a9/9d/a9bde6bcd01611c717fed16f3f18959d.png); */
+}
+.header-nav-name{
+    position: relative;
+}
+.header-nav-icon.hot{
+    position: absolute;
+    height: 10px;
+    top: -8px;
+    right: -21px;
+}
+.header-nav-icon.info{
+    position: absolute;
+    height: 9px;
+    top: -6px;
+    right: -32px;
+}
+.header-bottom-ri{
+    display: flex;
+    align-items: center;
+}
+.header-bottom-ri .header-search-box{
+    display: flex;
+    align-items: center;
+    width: 274px;
+    height: 36px;
+    margin-left: 20px;
+    margin-right: 17px;
+}
+.header-search-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #fa8919;
+}
+.search-input{
+    width: 172.5px;
+    /* height: 100%; */
+    /* -webkit-box-flex: 1;
+    flex: 1 1 auto; */
+    margin-left: 13px;
+    margin-right: 15px;
+}
+.search-input-placeholder{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #353535;
+    outline: none;
+    border: none;
+    /* background: transparent; */
+}
+.search-input-placeholder::placeholder{
+    color: rgb(178, 178, 178);
+}
+.search-btn{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #fa8919;
+    cursor: pointer;
+}
+.search-btn-icon{
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    /* font-size: 14px; */
+}
+.header-download-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
+    margin-right: 18px;
+    color: #353535;
+}
+.header-download-item .download-item-icon{
+    width: 25px;
+    height: 21px;
+    margin-bottom: 4px;
+}
+.header-download-item .download-item-name{
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 500;
+}
+.download-item-icon.ai{
+    width: 22px;
+    height: 22px;
+}
+.header-sign{
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-sign-item{
+    display: block;
+    margin-top: 2px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+}
+.header-sign-item.login::after{
+    content: "|";
+    margin-top: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
