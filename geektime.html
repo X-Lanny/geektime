@@ -243,12 +243,604 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="hotcourse-section"></div>
-        <div class="trainer-section"></div>
-        <div class="opencourse-section"></div>
-        <div class="jikemarket-section"></div>
-        <div class="moreactivity-section"></div> -->
+        <div class="hotcourse-section">
+            <div class="course-container">
+                <div class="course-title-container">
+                    <div class="course-title-box">
+                        <div class="course-title active">
+                            热门在学
+                            <img class="course-title-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAgCAMAAACcqC7MAAAAllBMVEUAAAD/WgX/YAv/dib/WQX/WgX/Wgb/WQb/WgX/WQX/Wgb/Wgf/XAb/WQX/////yKz/wKD/3c3/t5P/tZD/nWv/h0v/o3T/pXf/4dH/klv/dS//XQv//fz/+/n/9fH/59v/z7b/bib/ZBT/49X/1sH/oXH/jlX/ezf/aBz/9/T/7+f/xKb/q4D/uZX/sov/nGn/l2P/fj0I2ySIAAAADXRSTlMAlhgG9PLj2ce/gkctAN5a7wAAAXVJREFUSMel1tlygjAAheHQQEXxHEFFEdz3rdv7v1wFU+MyiRW+G8k4808SmUShycCp11z8g1urO4EUj94cDy/xnLe7hGy4eJnbkDfT8FGKfzWZ5jtKem9e5qEapSpqLtJHBf55XxqopFEsxkUlbr4gB9og7KqnbjhAbtY/LKJwNcfJKtRSXDhCSA9amy311GKnqI5ZmPycBlNq8dVbJ0UAS6RHTtezdBBxGAOb+GTCj/xjDi0QjiWy3fFYjLIDJxkKEdWKr9dTt0RCJmo4H3NljNRFzRKZ8PvqG2OkJtzbSNI/S/LIkBsoX1wYI67AbUTrYEZuocQcGSPefSTpneUzmZMplAH3luXAsid7/TocuTRvrDWyZAglYtv8E1sjMYfp32pGM2MksEYw5Xidj3ojfsIU8aQ9sp2S42W0I8PMGHGELZLrLYbkKFkDOvJ4FOCZbJNmzw4lVOTLahF9UFdsNEXFiL68oJW/RqGVuNANkTJ/LX4BO2BuwoEE+aAAAAAASUVORK5CYII=" alt="">
+                        </div>
+                        <div class="course-title">
+                            近期上新
+                        </div>
+                    </div>
+                    <div class="course-preference">
+                        <img class="course-preference-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABJpJREFUWEfFV21MVXUcfn4XuA0MC3oZi/GhUc7NWn6QlBUsa9aiNAMtZ36gskhdNK9zDe0DH2o1o9cVNIRhH4T5kluZazTTBHWRs3IWNUdrLRrRiAqW8nLP/2n/c87/3HMvh7gc2brb3b33nLP/8/xenuf3u4L/+SVzjc9d1xWgZNGQLP88ns7Zc0aAL+WvANEKoAiCP0Gplxf+eHsmEnNCgC8X3AUV7wQZBejH7EBOzpMS6780HZHLJsCGGxZikqdBlQcqOAQI0CUichaZXC3PD/cHkbgsAny1+Hqo8S+o1I3igpIK9nf7tyYEQGQQklElO34/lUoiNAG+XpqN+MBxKmup6FM0WGEJUHw38O0HwND3DgnlkgAnIJFK2Tl0xE8iFAGSgoabDgKstIF1uiOZQO05IDoPiI8BR2JA7yFfJuyy/IX5+QVS2zduSIQj0LCgAeA2O912rfU7Aj7RCbmmOBHgydeAk/pR0xNKP7ZE6obOhibAN27ZBGU1+hvOq/tVRcDDu4Frb3bOpwKblkFGdP/ZPWEhO7tItv48EIoA31pcAVofUVkZOirdbB443e9Z84CKBmDBvcDIr0BzORDXGbcz9Z7UDWwK1QN8t2Qx4pPdUOpKwgG3I0wlYiQ4vxAY/Q2wPPBuZF+xwl9/WyAzOZWdyabSQkxM9AAsNBFrYE0gITmnFxL3nXs2QeICsnJKJfbd8KxlyNY7cnEx3g2q2/ThGsRmPW30iay4aR9CFMuktu/HWRsR96/NwGD/YYL3G3czUdnRi4lYN7qWo47a9QSnFGMQuUe2/XA6lBWzsbyJVM8Yl7OjduvvpNoBdqSY0g/6IrFOYr37/6vM0/YAG5dvh3AXbScztuqk35TCRJyIXmPqmtvR10ns/Csz9VggATbfVwXGD1BRElJzow2QntMX/iHEFnnu66dmAg9UAZtXLgInzwAq2zSaTq834XyyM8BOBgwJ9SluzX0g9ELClgd3U1kbPY8Xx0b9084PnDQFBedxNe+UDT0j6UQfnIHWVWeg1BJ/nb0Zr3TnJzre2K1NSDAARpbKlq5f0gUPJtCyaphgnn+Umj5IlqIxGq0C/INMVS413V/NBnwKAe5dn8fxS8NmhicDJ5zNP4gEtBCR1fL0Zx/PFnwqgbZHS8j4l57szKj1Pv0rl2s6UM9KzdF3woAHEFizjmSHU1uzXCY8wFuxjCVTvSk1nVvDgk8lsGftTir1YtKB3sLhI6KnGNWH2FhSKVJvdq5QPJKMiG1VbSSqg09y5SgYA1UrcqPb5ZED3rrN5ooYGN8BQb4n4aTl1A2AGAXYKltOxYJK0EWybMrIFLEAHAOkHVnRQ7Jhb5LO2bZyIeJWr94VvWGlzcvNnj0W3NFtj3FoOWdUyOYTn6RmoI+Et9QJpAcRtiMa3SfrOwanyzHbHiqjpbqc3S8hz8T/A3Ndc9Kx6EWE1bK56/1kAnvWPA7iMQAnIBntUr0vcIanEuHx+kz89M0xKlXmSTRlUzILjGtaFyCR26Xm6N9pbUTpdJdD4lw5IPmAEyUs99P8dtQ1CmZ1S83hi4FOmA7YXD7zL28NFU6sYMGUAAAAAElFTkSuQmCC" alt="">
+                        <span class="course-preference-title">设置学习偏好</span>
+                    </div>
+                </div>
+                <div class="course-list">
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/d4/74/d46d28c922505c8070eff6daa3192d74.jpg?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                MySQL 实战 45 讲
+                            </div>
+                            <div class="course-item-info-tag">
+                                <div class="course-item-info-name">林晓斌</div>
+                                <div class="course-item-info-intro">网名丁奇，前腾讯云数据库负责人</div>
+                            </div>
+                            <div class="course-item-info-num">
+                                <span>49讲｜</span>
+                                <span>222758</span>
+                                <span> 人已学习 </span>
+                            </div>
+                            <div class="course-item-info-price">
+                                <img class="course-item-info-icon" src="data:image/png;base64,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" alt="">
+                                <div class="course-item-info-saleprice">¥68</div>
+                                <div class="course-item-info-marketprice">
+                                    ¥<span class="course-item-info-marketprice">199</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/e2/be/e2ca3fac4ce89053602b9e7a6d9c02be.jpg?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                左耳听风
+                            </div>
+                            <div class="course-item-info-tag">
+                                <div class="course-item-info-name">陈皓</div>
+                                <div class="course-item-info-intro">网名“左耳朵耗子”，资深技术专家</div>
+                            </div>
+                            <div class="course-item-info-num">
+                                <span>119讲｜</span>
+                                <span>178272</span>
+                                <span> 人已学习 </span>
+                            </div>
+                            <div class="course-item-info-price">
+                                <img class="course-item-info-icon" src="data:image/png;base64,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" alt="">
+                                <div class="course-item-info-saleprice">¥98</div>
+                                <div class="course-item-info-marketprice">
+                                    ¥<span class="course-item-info-marketprice">399</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/65/c0/65dc525140a25af39b780aaae65821c0.jpg?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                数据结构与算法之美
+                            </div>
+                            <div class="course-item-info-tag">
+                                <div class="course-item-info-name">王争</div>
+                                <div class="course-item-info-intro">前 Google 工程师</div>
+                            </div>
+                            <div class="course-item-info-num">
+                                <span>81讲｜</span>
+                                <span>281630</span>
+                                <span> 人已学习 </span>
+                            </div>
+                            <div class="course-item-info-price">
+                                <img class="course-item-info-icon" src="data:image/png;base64,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" alt="">
+                                <div class="course-item-info-saleprice">¥68</div>
+                                <div class="course-item-info-marketprice">
+                                    ¥<span class="course-item-info-marketprice">199</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/65/c0/65dc525140a25af39b780aaae65821c0.jpg?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                设计模式之美
+                            </div>
+                            <div class="course-item-info-tag">
+                                <div class="course-item-info-name">王争</div>
+                                <div class="course-item-info-intro">前 Google 工程师</div>
+                            </div>
+                            <div class="course-item-info-num">
+                                <span>113讲｜</span>
+                                <span>121929</span>
+                                <span> 人已学习 </span>
+                            </div>
+                            <div class="course-item-info-price">
+                                <img class="course-item-info-icon" src="data:image/png;base64,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" alt="">
+                                <div class="course-item-info-saleprice">¥98</div>
+                                <div class="course-item-info-marketprice">
+                                    ¥<span class="course-item-info-marketprice">299</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ranking-container">
+                <div class="course-title active">
+                    热门榜单
+                </div> 
+                <div class="ranking-content-box">
+                    <div class="ranking-title-wrap">
+                        <h3 class="ranking-title">7日飙升榜</h3>
+                        <img class="ranking-title-img" src="data:image/png;base64,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" alt="">
+                    </div>
+                    <div class="ranking-list">
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">1</div>
+                            <div class="ranking-item-info">程序员职业规划手册</div>
+
+                        </div>
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">2</div>
+                            <div class="ranking-item-info">许式伟的架构课</div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">3</div>
+                            <div class="ranking-item-info">互联网人的数字化企业生存指南</div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">4</div>
+                            <div class="ranking-item-info">AI大模型系统实战</div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">5</div>
+                            <div class="ranking-item-info">深入拆解Java虚拟机</div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">6</div>
+                            <div class="ranking-item-info">面试现场</div>
+                        </div>
+                        <div class="ranking-item">
+                            <div class="ranking-item-num">7</div>
+                            <div class="ranking-item-info">Java并发编程实战</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trainer-section">
+            <div class="trainer-path-container">
+                <div class="trainer-path-title">学习路径</div>
+                <div class="trainer-path-desc">全部18个
+                    <div class="train-path-arrow">⌵</div>
+                </div>
+            </div>
+            <div class="trainer-list">
+                <div class="trainer-arrow-bg pre">
+                    <div class="train-arrow pre">⌵</div>
+                </div>
+                <div class="trainer-arrow-bg next">
+                    <div class="train-arrow next">⌵</div>
+                </div>
+                <div class="trainer-slider-wrapper">
+                    <div class="trainer-item">
+                        <div class="train-item-img-box">
+                            <img class="trainer-item-img" src="https://static001.geekbang.org/resource/image/99/02/996a69d911814a20eb71012fca4e2002.jpg?x-oss-process=image/resize,w_48,h_48,m_fill/format,webp" alt="">
+                        </div>
+                        <div class="trainer-item-info">
+                            <div class="trainer-item-title">AI大模型前沿知识</div>
+                            <div class="trainer-item-desc">11门课程</div>
+                        </div>
+                    </div>
+                    <div class="trainer-item">
+                        <div class="train-item-img-box">
+                            <img class="trainer-item-img" src="https://static001.geekbang.org/resource/image/ee/9d/ee4e027522f8f7144b12bcd3d8f6b29d.jpg?x-oss-process=image/resize,w_48,h_48,m_fill/format,webp" alt="">
+                        </div>
+                        <div class="trainer-item-info">
+                            <div class="trainer-item-title">Java工程师</div>
+                            <div class="trainer-item-desc">29门课程</div>
+                        </div>
+                    </div>
+                    <div class="trainer-item">
+                        <div class="train-item-img-box">
+                            <img class="trainer-item-img" src="https://static001.geekbang.org/resource/image/30/36/304bfd86dea2698cd6c8147ee8f63c36.jpg?x-oss-process=image/resize,w_48,h_48,m_fill/format,webp" alt="">
+                        </div>
+                        <div class="trainer-item-info">
+                            <div class="trainer-item-title">架构师</div>
+                            <div class="trainer-item-desc">28门课程</div>
+                        </div>
+                    </div>
+                    <div class="trainer-item">
+                        <div class="train-item-img-box">
+                            <img class="trainer-item-img" src="https://static001.geekbang.org/resource/image/25/d0/2541de63f52593f6ea77ae38441d46d0.jpg?x-oss-process=image/resize,w_48,h_48,m_fill/format,webp" alt="">
+                        </div>
+                        <div class="trainer-item-info">
+                            <div class="trainer-item-title">运维工程师</div>
+                            <div class="trainer-item-desc">32门课程</div>
+                        </div>
+                    </div>
+                    <div class="trainer-item">
+                        <div class="train-item-img-box">
+                            <img class="trainer-item-img" src="https://static001.geekbang.org/resource/image/99/02/996a69d911814a20eb71012fca4e2002.jpg?x-oss-process=image/resize,w_48,h_48,m_fill/format,webp" alt="">
+                        </div>
+                        <div class="trainer-item-info">
+                            <div class="trainer-item-title">机器学习工程师</div>
+                            <div class="trainer-item-desc">13门课程</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="hotcourse-section">
+            <div class="course-container">
+                <div class="course-title-container">
+                    <div class="trainercourse-title-content">
+                        <div class="common-course-title-box">
+                            <h3 class="common-title">训练营 · 提薪榜</h3>
+                            <div class="course-title-arrow">⌵</div>
+                        </div>
+                        <div class="opencourse-subtitle">
+                            成为技术大牛，助力职场提升
+                        </div>
+                    </div>
+                    <div class="course-preference">
+                        <img class="course-preference-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAYAAAB/E6/TAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGqADAAQAAAABAAAAHAAAAADDiUOqAAAFDUlEQVRIDZVWS4hcRRQ993X3dGzNxxiNGccPJAY1aKDFz4hEFy4NAREUdKMgxoULFUVEN65ciIImZhQEwSxcCBpcxghiQBHF/yCDExeSxOhEJROJk3nvXc+5Va+7J4wQK3mpqlu37jn3Vx1DHr67vwll9TSqsg/4ZqBso3aDVwbUQLXINWerDRVlWndWGC6dBBb+msa63u22/YO5xt6ZM43Q7K4bHkFdvczLXc5wryisYDTm3JuAZJiy4Z46rS788tuot0gif59AZ6Fv9340eyaI9oXvumUbp1cd1nWnLZo1K8g8fVYUIaOQMp2lWece+zblbXirtwoLYz/46zfftCwQhU/yazXGNQuMt+NrgDWHfOTcCCAQfbHu9LrorTnob/Tv5OUlo6DGZGOkARHrBCz28iztB2QwJONo0SA/eaW5OKeN3sX7fM/Wh0eRCoJcYCZlMpbBQaiSsQa8ITPQCwLkWXR4j14RJK0FOlZg5fge3731+QasHYbrOjxwJkkGw/i5F8LWXUkjvBeFwDPNJw7Djn3L+1lXAAGkBPN2s8aYYfX4sz5VT9jO7x5se1jK8c9rrN0E3PM20O5GphpWypqG738O9tVbQShyJFCSMCNYrAUoWdvsvIkH/DU/X76TslKlpULIkF10Ne93ZXPZYRM3hueo/mGLlbzPYmAIyYxyhXBYJJG/lRt2qFxIIntE1SjfQx/Dfz4I23BtGJQn4qph80fgn08pwNyxz375ELaaEaAdR8l+JrD6Cuy/mrNrL/nUHYRJjalDNayas5FF07JRo4HVuLmhl2tm6aRPzZ10wyafmAid2EbpimeEMnsob/VleVN5A11WqMIe3oZH0h+WftyVPd5PoVNexCaElEfAODFPqsRgSW8aLyjkX4ZDELxn/HTfytN8Ik/RfkCHHTrDWUD8JwB4KO5heMUa+I5X2GEbQ0bxYEhHo5nTLu9FYPo94P2HeJ6ikiLkdIUup8SOhOuKWwOkMXLWs2xtuYvFcRmRuVaEOIsGVzmmircgdXjka/ipP8/a/hLFw1/A54+GrRQjAtGm+Zvb2Wuj1aKYswpbHdiqcWaB6torB6o6hUc/HcqdqjTnyfW6lOyr4zOpt6iv8o8qRuXtJag80sXIU7kAPz7LrRI9LPeU/AQ8uhaZKGlZULjYNPoj+wrcsBjENICSq9SkgobkAldYcx7zZREIQwxNkMv3mwLQ1vhs81DlrdwIopnjGJjcCV+/hZqJlyIlQIE3s2AjglkORgHfvwv/Zm+6pxcnCDYexfXsiW5u3Aa77m4hDkbyLm3/a61Tv+R62Ox+4OSv3JDYoOrEWL9HWRBuzx8LpQHK/1gYq9VPn+QNhlM2FTHOETpXdSh0ZBDBmZuB73sMWH9VBqQ08qFZOvmVkLYioI8yV+gOHWD1cZYDAuOZyLf5IPzB5VqexGHMfALx+4/Ab9M0kstdLcByTq0gYqqykb3KOevKiwAgUDxHbnMFiuKz5J5cTL9HCVRKykYu0Who6UhOQ5RHv8de4c9yneUCoDBFyPBpwf//vEQ10ssplsv5ldALJeVgSEjpNCBJnoik80wo3xeRpG8lMV4s7P53DtDeEzTO5zgZDiWtpTwoFDImgZTgUcDkpe4OSGRCKFoLlD9qTx39RLAxfO9916BcfIbvfB91vZm5aEXMje+88lOrCiJPnFN+qJdkXrEaKKtKcuTvR1XOEOtLWPWCPT77kwD+BTuvfJhRX5PVAAAAAElFTkSuQmCC" alt="">
+                        <span class="course-preference-title">领取面试资料</span>
+                        <div class="course-preference-hover-code">
+                            <span class="course-preference-hover-title">微信扫码</span>
+                            <img class="course-preference-hover-img" src="https://static001.geekbang.org/static/time/img/activity/contact-qrcode.png?x-oss-process=image/resize,w_161,h_161/format,webp" alt="">
+                            <img class="course-preference-hover-tri" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAKCAYAAACngj4SAAAAAXNSR0IArs4c6QAAANlJREFUOE+107+OQVEQx/Hvj47WA4hW4REk4gX0IrGdlSgkXmIjoroqBXpPQLPvsFtKttWKkiNHZuX6dwn3nvJkZj5nzmTknGsAAZAl2bMBPuUN51wJWAC5hMw1UJH0cwQNLQNLIB0zujPs29c9gYb2gK+YwZ6k/n/NM9BQP89WTGggqR2udQtMAROg/iY6BZqS9pGgdekfMgQ6L6I+tyvJXeZfdRgOsJUZAZkn4a0fh6TZvfhI0LrNAwOg9gCdW1d/UXEPwdDaFIEPoAoU7H5l+zuW9PvMLxwAtRo6ZHK93ccAAAAASUVORK5CYII=" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="course-list">
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/24/4e/24e18654fa16f4ef221a9081a423684e.png?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                            <div class="course-item-color-icon first">1</div>
+                            <!-- <img class="course-item-color-icon" src="https://static001.geekbang.org/static/time/img/bg-list-1.49043357.png" alt=""> -->
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                AI 大模型应用开发实战营
+                            </div>
+                            <div class="trainercourse-item-info-summary">
+                                一站式掌握硬件、理论、LangChain 开发框架和项目实战技能
+                            </div>
+                            <div class="trainercourse-item-info-author">
+                                彭靖田｜谷歌开发者专家，LangChain开发者
+                            </div>
+                            <div class="trainercourse-item-info-signup">
+                                <div class="trainercourse-item-info-time">12月26日开课 </div>
+                                <div class="trainercourse-item-info-btn">立即报名</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/54/f4/5435ab5f42ee926d65be8dbc84affef4.png?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                            <div class="course-item-color-icon second">2</div>
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                AI 大模型微调训练营
+                            </div>
+                            <div class="trainercourse-item-info-summary">
+                                全面解析微调技术理论，掌握大模型微调核心技能
+                            </div>
+                            <div class="trainercourse-item-info-author">
+                                彭靖田｜谷歌开发者专家，LangChain 开发者，谷歌出海创业加速器导师
+                            </div>
+                            <div class="trainercourse-item-info-signup">
+                                <div class="trainercourse-item-info-time">01月16日开课 </div>
+                                <div class="trainercourse-item-info-btn">立即报名</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/97/64/97104d39c68dd885883d7a2492d67f64.png?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                            <div class="course-item-color-icon third">3</div>
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                大数据项目实战营
+                            </div>
+                            <div class="trainercourse-item-info-summary">
+                                转行和 3 年以下大数据从业者的必修课
+                            </div>
+                            <div class="trainercourse-item-info-author">
+                                王超｜资深大数据讲师
+                            </div>
+                            <div class="trainercourse-item-info-signup">
+                                <div class="trainercourse-item-info-time">01月23日开课 </div>
+                                <div class="trainercourse-item-info-btn">立即报名</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-item-pic">
+                            <img class="course-item-img" src="https://static001.geekbang.org/resource/image/0a/b7/0ae61c7459f333711f0752c6446114b7.png?x-oss-process=image/resize,w_153,h_202/format,webp" alt="">
+                            <div class="course-item-color-icon fourth">4</div>
+                        </div>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                初级 Go 工程师训练营
+                            </div>
+                            <div class="trainercourse-item-info-summary">
+                                跨过转型门槛，成为企业认可的高薪 Go 工程师
+                            </div>
+                            <div class="trainercourse-item-info-author">
+                                邓明｜前 Shopee 高级工程师、Beego PMC
+                            </div>
+                            <div class="trainercourse-item-info-signup">
+                                <div class="trainercourse-item-info-time">01月18日开课 </div>
+                                <div class="trainercourse-item-info-btn">立即报名</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-container">
+                <div class="experience-content">
+                    <div class="common-course-title-box">
+                        <h3 class="common-title">体验课/小课</h3>
+                    </div>
+                    <div class="opencourse-subtitle">
+                        体验最小版本的训练营课程
+                    </div>
+                </div>
+                <div class="experience-list-box">
+                    <div class="experience-item-container">
+                        <div class="experience-item-box prompt">
+                            <div class="experience-item-title">3小时掌握Prompt核心技巧与GPT技术理论</div>
+                            <div class="experience-item-desc">快速掌握 Prompt 工程核心技巧与 GPT 技术理论贯通</div>
+                            <div class="experience-item-price">
+                                <div class="experience-item-newprice">¥0</div>
+                                <div class="experience-item-originalprice">
+                                    ¥<span>99</span>
+                                </div>
+                            </div>
+                            <img class="experience-item-icon" src="data:image/png;base64,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" alt="">
+                        </div>
+                    </div>
+                    <div class="experience-item-container">
+                        <div class="experience-item-box go">
+                            <div class="experience-item-title">3小时入门Go语法</div>
+                            <div class="experience-item-desc">Beego PMC手把手带你入门</div>
+                            <div class="experience-item-price">
+                                <div class="experience-item-newprice">¥0</div>
+                                <div class="experience-item-originalprice">
+                                    ¥<span>99</span>
+                                </div>
+                            </div>
+                            <img class="experience-item-icon" src="data:image/png;base64,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" alt="">
+                        </div>
+                    </div>
+                    <div class="experience-item-container">
+                        <div class="experience-item-box aigc">
+                            <div class="experience-item-title">2023 AIGC 知识库</div>
+                            <div class="experience-item-desc">别人付费才能看的知识库</div>
+                            <div class="experience-item-price">
+                                <div class="experience-item-newprice">¥0</div>
+                                <div class="experience-item-originalprice">
+                                    ¥<span>99</span>
+                                </div>
+                            </div>
+                            <img class="experience-item-icon" src="data:image/png;base64,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" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="opencourse-section">
+            <div class="opencourse-title-container">
+                <div class="common-course-title-box">
+                    <h3 class="common-title">公开课</h3>
+                    <div class="course-title-arrow">⌵</div>
+                </div>
+                <div class="opencourse-subtitle">大咖布道，免费分享实战案例</div>
+            </div>
+            <div class="opencourse-list-box">
+                <div class="opencourse-item">
+                    <div class="opencourse-item-img-box">
+                        <img class="opencourse-item-img" src="https://static001.geekbang.org/resource/image/8a/d3/8a63735be939ef20ff85aabb33c7b4d3.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                    </div>
+                    <div class="opencourse-item-desc">
+                        <div class="opencourse-item-title">了不起的极客</div>
+                        <div class="opencourse-item-subtitle">InfoQ | 编辑部</div>
+                    </div>
+                    <div class="opencourse-item-info">
+                        <div class="opencourse-item-num">117人学过</div>
+                        <div class="opencourse-item-btn">免费领取</div>
+                    </div>
+                </div>
+                <div class="opencourse-item">
+                    <div class="opencourse-item-img-box">
+                        <img class="opencourse-item-img" src="https://static001.geekbang.org/resource/image/dd/a4/ddd1c89638924dafde44a91fa02522a4.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                    </div>
+                    <div class="opencourse-item-desc">
+                        <div class="opencourse-item-title">新知实验室</div>
+                        <div class="opencourse-item-subtitle">InfoQ | 编辑部</div>
+                    </div>
+                    <div class="opencourse-item-info">
+                        <div class="opencourse-item-num">111人学过</div>
+                        <div class="opencourse-item-btn">免费领取</div>
+                    </div>
+                </div>
+                <div class="opencourse-item">
+                    <div class="opencourse-item-img-box">
+                        <img class="opencourse-item-img" src="https://static001.geekbang.org/resource/image/4y/da/4yyfb232bfbfbdcc6ed827c16b04a9da.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                    </div>
+                    <div class="opencourse-item-desc">
+                        <div class="opencourse-item-title">极客视点</div>
+                        <div class="opencourse-item-subtitle">极客时间编辑部 | 极客时间编辑部</div>
+                    </div>
+                    <div class="opencourse-item-info">
+                        <div class="opencourse-item-num">11.5w人学过</div>
+                        <div class="opencourse-item-btn">免费领取</div>
+                    </div>
+                </div>
+                <div class="opencourse-item">
+                    <div class="opencourse-item-img-box">
+                        <img class="opencourse-item-img" src="https://static001.geekbang.org/resource/image/0f/69/0f95b62cf7yy6d6yy674f090d063b669.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                    </div>
+                    <div class="opencourse-item-desc">
+                        <div class="opencourse-item-title">周志明的软件架构课</div>
+                        <div class="opencourse-item-subtitle">周志明 | 博士，远光软件研究院院长，《深入理解Java虚拟机》《凤凰架构》等书作者</div>
+                    </div>
+                    <div class="opencourse-item-info">
+                        <div class="opencourse-item-num">5.3w人学过</div>
+                        <div class="opencourse-item-btn">免费领取</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jikemarket-section">
+            <div class="jikemarket-title-box">
+                <h3 class="common-title">极客商城</h3>
+                <div class="course-title-arrow">⌵</div>
+            </div>
+            <div class="jikemarket-list-box">
+                <div class="jikemarket-item zuoer">
+                    <div class="jikemarket-item-info">
+                        <div class="jikemarket-item-title">《左耳听风》新书</div>
+                        <div class="jikemarket-item-subtitle">现货首发 全网底价</div>
+                        <div class="jikemarket-item-price">¥59</div>
+                    </div>
+                    <div class="jikemarket-item-img-box">
+                        <img class="jikemarket-item-img" src="https://static001.geekbang.org/resource/image/22/f9/22a5a7b6446c66b239515770591f8ef9.png" alt="">
+                    </div>
+                </div>
+                <div class="jikemarket-item gpt">
+                    <div class="jikemarket-item-info">
+                        <div class="jikemarket-item-title">《GPT 图解》新书重磅上线</div>
+                        <div class="jikemarket-item-subtitle">大模型是怎样构建的价</div>
+                        <div class="jikemarket-item-price">¥39.9</div>
+                    </div>
+                    <div class="jikemarket-item-img-box">
+                        <img class="jikemarket-item-img" src="https://static001.geekbang.org/resource/image/03/ea/03bd24053d9fb33c24eb19f4c09941ea.png" alt="">
+                    </div>
+                </div>
+                <div class="jikemarket-item calcu">
+                    <div class="jikemarket-item-info">
+                        <div class="jikemarket-item-title">《计算》豆瓣9.6</div>
+                        <div class="jikemarket-item-subtitle">道哥新书｜为了可计算的价值</div>
+                        <div class="jikemarket-item-price">¥79</div>
+                    </div>
+                    <div class="jikemarket-item-img-box">
+                        <img class="jikemarket-item-img" src="https://static001.geekbang.org/resource/image/2c/fb/2ca34c0499ea62aa0c8e04fac2a203fb.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="moreactivity-section">
+            <h3 class="common-title">更多活动</h3>
+            <div class="moreactivity-list-box">
+                <div class="moreactivity-item">
+                    <img class="moreactivity-item-img" src="https://static001.geekbang.org/resource/image/90/54/9085350ed915277bdbdca89da53ffd54.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                </div>
+                <div class="moreactivity-item">
+                    <img class="moreactivity-item-img" src="https://static001.geekbang.org/resource/image/c6/07/c60d5ceb6c0da5f039592d9ef4067407.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                </div>
+                <div class="moreactivity-item">
+                    <img class="moreactivity-item-img" src="https://static001.geekbang.org/resource/image/1a/e7/1aef455578dc870a17ac498786da18e7.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                </div>
+                <div class="moreactivity-item">
+                    <img class="moreactivity-item-img" src="https://static001.geekbang.org/resource/image/ee/c5/ee2964d21bc614a544cf89eddaa919c5.jpg?x-oss-process=image/resize,w_376,h_212/format,webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="rightbox-section">
+            <div class="rightbox-container">
+                <div class="rightbox-list">
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name"> 直播 </div>
+                    </div>
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name">  体系课 </div>
+                    </div>
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name"> 训练营 </div>
+                    </div>
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name"> 公开课 </div>
+                    </div>
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name"> 极客商城 </div>
+                    </div>
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name"> 更多活动 </div>
+                    </div>
+                    <div class="rightbox-item">
+                        <div class="rightbox-item-name"> 购课福利 
+                            <img class="rightbox-item-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAUCAYAAAD7s6+GAAACe0lEQVRIS82XT2gTQRSHv1fT9aD4p0KFalFiKUVUvJV6qnrwolIhUdvgpXgIHipeLPXWS6HxIEQE6cGTaS2pisWLYFXES8EgWIQiKSq2ggdBpaJsIiOTJU02mSQk3Ujmtu+9efvtb96bmRUMQwWx8Fl9NKk+FD1AG2CZYj2wrQLLCG9Q8pCU/Uji2IV5pdCgQtYZlIoAHR5A1JIiCTIsk/aD/MlroCrIBnzWGKKu1pLd8zlKIqTtaxLnr86dA+23xhsGMvvVSiIyZQ+vgaqQFUCpuOeqeJFQJCgxe0YyjdPsWwLZbczb3gufXxS7TPatndB1DFa/wbuC79a+LbonDePnF/jx3uxTaoV02i9qwAqBumuM6g7DUBSmb8BsZgWcUWjXEOEJOHQkF/P7F8xO5ObdXIaWVjPM/BOIniqtv5ILovp9cUQC6wIdTUDHQXg+AwsvnVS95x3w7EceH4FN2xzfuSuQXIDEU+d56XXxCriA1H1RA80fgT01g3794Kj++A5Mhd1pIovQshMubnfbYzZUUtE945MG/QNsLAuar5QO9B+Gk4OOWq3tcDQAlw4U19npcUe9sZBbsepBbQ2qShZHthZLBWjQvfuh+wSEDAdXFjQ6BPO3c1nqBqqX9dW93Is6e2Bw9H8qmln6yoqW6/pyNaqbbJffgxp1mml9oHrbygLNTcPbOdi8I9f1piardukz25MXoKZ9VBeKCVLbqwHVG/739L7yoDppNSeTjm3rcmp58Vnp00bHlTuNXM0rZ2XSjlcGLX1e1N8jcl1iduY218igt0ilLq9d88rWaP01M70hiciIvjHlOxtB0RSwAioBTfpXJG76FfkHeNQ0fX9/ahUAAAAASUVORK5CYII=" alt="">
+                        </div>
+                    </div>
+                    <div class="rightbox-item app">
+                        <div class="rightbox-item-name app">
+                            <img class="rightbox-item-hotimg" src="https://static001.geekbang.org/resource/image/09/fb/093340acaea98c6c7b1f00b2a5d650fb.gif" alt=""> 
+                            App下载 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="page-footer"> </div>
+    <div class="page-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-top-logo">
+                    <img class="footer-top-logo-img" src="https://static001.geekbang.org/static/time/img/geek_elements/logo-wap.png" alt="">
+                    <div class="footer-top-logo-content">
+                        <a class="footer-top-link" href="">《用户协议》</a>
+                        <a class="footer-top-link" href="">《隐私政策》</a>
+                    </div>
+                </div>
+                <div class="footer-top-contact">
+                    <div class="footer-top-title">联系我们</div>
+                    <div class="footer-top-contact-box">
+                        <div class="footer-top-contact-desc">联系电话：18600430890</div>
+                        <div class="footer-top-contact-desc">联系邮箱：service@geekbang.com</div>
+                        <div class="footer-top-contact-desc">公司地址：北京市朝阳区望京北路9号2幢7层A701</div>
+                    </div>
+                </div>
+                <div class="footer-top-business">
+                    <div class="footer-top-title">商务合作</div>
+                    <div class="footer-top-business-box">
+                        <a class="footer-top-link" href="">市场合作</a>
+                        <a class="footer-top-link" href="">自助推广</a>
+                        <a class="footer-top-link" href="">推荐作者</a>
+                        <a class="footer-top-link" href="">企业合作 </a>
+                    </div>
+                </div>
+                <div class="footer-top-focus">
+                    <div class="footer-top-title">关注我们</div>
+                    <div class="footer-top-focus-box">
+                        <div class="footer-top-focus-qr">
+                            <img class="footer-top-focus-img" src="https://static001.geekbang.org/static/time/img/qrcode/gk_service.jpg" alt="">
+                        </div>
+                        <div class="footer-top-focus-desc">
+                            扫码关注<br>
+                            极客时间服务号
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-copyright">Copyright © 2023, 极客邦控股（北京）有限公司</div>
+                <div class="footer-bottom-box">
+                    <a class="footer-bottom-link" href="">京 ICP 备 16027448号-3.</a>
+                    <a class="footer-bottom-link" href="">
+                        <img class="footer-bottom-img" src="https://static001.geekbang.org/static/time/img/geek_elements/beian.png" alt="">
+                        京公网安备 11010502037384号
+                    </a>
+                    <a class="footer-bottom-link" href="">产品资质</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
